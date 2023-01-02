@@ -1,9 +1,17 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+var authHandler = require("../apis/auth");
+var { verifySignUp } = require("../apis/middleware");
+
+var noteRoute = require("./notes");
+
+router.post("/login", authHandler.login);
+router.post(
+  "/signup",
+  authHandler.signup, verifySignUp.checkDuplicateUsername
+);
+
+router.use("/note", noteRoute);
 
 module.exports = router;
