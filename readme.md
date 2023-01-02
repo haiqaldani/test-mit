@@ -13,9 +13,9 @@ List API
     body: {
         name, phoneNumber, description, address
     }
-2. List all notes /note (jika ingin melihat nomor dan alamat harus mengisi username dan password pada body)
-3. Get note by id /note/:id (jika ingin melihat nomor dan alamat harus mengisi username dan password pada body)
-4. Delete note /note/delete/:id (note harus login dengan mengisi username dan password pada body)
+2. List all notes /note (jika ingin melihat nomor dan alamat harus mengisi username dan password dan role = admin pada body)
+3. Get note by id /note/:id (jika ingin melihat nomor dan alamat harus mengisi username dan password dan role = admin pada body)
+4. Delete note /note/delete/:id (note harus login dengan mengisi username dan password dan role = admin pada body)
 5. Sign Up /signup
     body: {
         username, name, role (default: user), password
