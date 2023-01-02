@@ -2,7 +2,6 @@ Cara untuk menjalankan Projek Weeding GuestBook
 1. Buka Terminal
 2. cd test2
 3. Pastikan terminal berjalan difolder test2
-4. npm install
 4. Buat folder .env seperti contoh di .env example
 5. npm install
 6. npx sequelize-cli db:migrate untuk migrasi db
